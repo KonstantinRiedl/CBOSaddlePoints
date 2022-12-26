@@ -13,7 +13,7 @@ Date 23.12.2022
 
 ### Consensus-Based Optimization for Saddle Point Problems
 
-https://arxiv.org/abs/2212.XXXXX
+https://arxiv.org/abs/2212.12334
 
 by
 
@@ -52,6 +52,6 @@ EnergyBasedCBOAnalysis
       title = {Consensus-Based Optimization for Saddle Point Problems},
      author = {Jinniao Qiu and Hui Huang and Konstantin Riedl},
        year = {2022},
-    journal = {arXiv preprint arXiv:2212.XXXXX},
+    journal = {arXiv preprint arXiv:2212.12334},
 }
 ```
