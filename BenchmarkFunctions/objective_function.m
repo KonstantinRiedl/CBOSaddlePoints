@@ -114,6 +114,30 @@ elseif strcmp(name,'NonSeparateRastrigin')
     parametersE = [xrange_plot, yrange_plot, [-50;50]];
     parametersOptimizer = parametersOptimizer;
     parametersInitialization = parametersInitialization;
+elseif strcmp(name,'generalSaddle')
+    n = 10;
+    A = zeros(d1);
+    B = zeros(d2,d1);
+    C = zeros(d2);
+    for i=1:n
+        A_i = randn(d1);
+        A_i = A_i'*A_i;
+        B_i = randn(d2,d1);
+        C_i = randn(d2);
+        C_i = C_i'*C_i;
+        A = A + A_i;
+        B = B + B_i;
+        C = C + C_i;
+    end
+    %S = [A, B'; B, -C];
+    %E = @(x,y) sum([x;y].*(S*[x;y]),1)/n;
+    E = @(x,y) (sum(x.*(A*x),1)/2 + sum(x.*(B'*y),1) - sum(y.*(C*y),1)/2)/n;
+    
+    xrange_plot = [-10;15];
+    yrange_plot = [-10;15];
+    parametersE = [xrange_plot, yrange_plot, [-50;50]];
+    parametersOptimizer = parametersOptimizer;
+    parametersInitialization = parametersInitialization;
 else
     disp('This objective function is not implemented yet.')
 end

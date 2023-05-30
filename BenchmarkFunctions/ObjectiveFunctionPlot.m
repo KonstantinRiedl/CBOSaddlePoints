@@ -23,7 +23,7 @@ d2 = 1;
 
 % % energy function E
 % (E is a function mapping columnwise from R^{d1\times N} \times R^{d2\times N} to R)
-objectivefunction = 'NonSeparateRastrigin';
+objectivefunction = 'SaddleRastrigin';
 [E, parametersE, parametersCBO, parametersInitialization] = objective_function(objectivefunction, d1, d2);
 
 % range of x (and x and y for plotting)
